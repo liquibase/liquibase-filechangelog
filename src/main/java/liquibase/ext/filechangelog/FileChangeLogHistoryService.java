@@ -27,7 +27,7 @@ import java.util.List;
 public class FileChangeLogHistoryService extends OfflineChangeLogHistoryService {
 
     public FileChangeLogHistoryService() {
-        super(null, Config.getInstance().getChangeLogHistoryFile(), false);
+        super(null, Config.getInstance().getChangeLogHistoryFile(), false, false);
     }
 
     @Override
