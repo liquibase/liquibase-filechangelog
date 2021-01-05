@@ -4,7 +4,7 @@
 
 	<groupId>org.liquibase.ext</groupId>
 	<artifactId>liquibase-filechangelog</artifactId>
-	<version>4.2.2-SNAPSHOT</version>
+	<version>4.2.2</version>
 
 	<name>Liquibase File Based Changelog Extension</name>
 	<description>Liquibase extension to use a local file rather than a database table to track executed changeSets</description>
@@ -29,7 +29,7 @@
 	<scm>
 		<connection>scm:git:http://github.com/liquibase/liquibase-filechangelog.git</connection>
 		<url>https://github.com/liquibase/liquibase-filechangelog</url>
-	  <tag>HEAD</tag>
+	  <tag>liquibase-filechangelog-4.2.2</tag>
   </scm>
 
 	<developers>
