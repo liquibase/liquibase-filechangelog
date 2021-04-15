@@ -1,4 +1,4 @@
-liquibase-filechangelog
+liquibase-filechangelog [![Build and Test Extension](https://github.com/liquibase/liquibase-filechangelog/actions/workflows/build.yml/badge.svg)](https://github.com/liquibase/liquibase-filechangelog/actions/workflows/build.yml)
 ================
 
 Liquibase extension to support file based changeSet tracking rather than database-table based.
