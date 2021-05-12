@@ -6,25 +6,13 @@ on:
       - closed
 
 jobs:
-  verify:
-    name: Verify Closed PR is Release Candidate
+  build:
+    name: Build Artifact
     runs-on: ubuntu-latest
     if: |
       ${{ github.ref == 'main' }} &&
       ${{ github.event.pull_request.merged }} &&
       contains( github.event.pull_request.labels.*.name, 'Extension Release Candidate :rocket:' )
-    steps:
-      - run: echo "Starting Release ... "
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: |
-          echo "$GITHUB_CONTEXT"
-
-  build:
-    needs: [verify]
-    name: Build Artifact
-    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Cache Local Maven Repository
