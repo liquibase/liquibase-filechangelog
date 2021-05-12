@@ -15,6 +15,11 @@ jobs:
       contains( github.event.pull_request.labels.*.name, 'Extension Release Candidate :rocket:' )
     steps:
       - run: echo "Starting Release ... "
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: |
+          echo "$GITHUB_CONTEXT"
 
   build:
     needs: [verify]
