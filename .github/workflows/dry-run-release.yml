@@ -1,0 +1,12 @@
+name: Dry run release
+
+on:
+  workflow_dispatch: # Trigger on demand
+  schedule: # Trigger weekly all Wednesdays at midnight UTC
+    # Trigger weekly on Wednesday at midnight Austin time (Standard Time)
+    - cron: "0 6 * * 3"
+
+jobs:
+    nightly-build:
+      uses: liquibase/build-logic/.github/workflows/extension-dry-run.yml@DAT-18303
+      secrets: inherit
