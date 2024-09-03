@@ -45,6 +45,7 @@ jobs:
     with:
       dry_run: true
       dry_run_version: "0.0.${{ github.run_number }}"
+      dry_run_release_id: ${{ needs.dry-run-get-draft-release.outputs.dry_run_release_id }}
       deployToMavenCentral: false
 
    cleanup:
