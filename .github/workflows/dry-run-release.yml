@@ -50,7 +50,7 @@ jobs:
    cleanup:
     runs-on: ubuntu-latest
     if: always()
-    needs: [ dry-run-release-published ]
+    needs: [ dry-run-get-draft-release, dry-run-release-published ]
     steps:
       - name: Checkout liquibase
         uses: actions/checkout@v4
